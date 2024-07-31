@@ -1,13 +1,18 @@
 /* Grundlegende Stile */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* Header und Navigation */
 header {
     background-color: #4CAF50;
     color: white;
@@ -31,18 +36,17 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Hauptinhalt */
 main {
     flex: 1;
     padding: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+h1 {
+    margin-bottom: 20px;
 }
 
+/* Tabelle */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -60,6 +64,14 @@ th, td {
 
 th {
     cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
 
 /* Responsives Design */
