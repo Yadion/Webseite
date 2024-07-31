@@ -1,11 +1,40 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="sylesheet" href="style.css"
+    <title>CO2-Footprint Webseite</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <p> test </p>
+    <header>
+        <img src="logo.png" alt="Logo" id="logo">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>CO2-Emissionsdaten</h1>
+            <table id="emissionsTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('country')">Land</th>
+                        <th onclick="sortTable('company')">Unternehmen</th>
+                        <th onclick="sortTable('emissions')">Emissionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fiktive Daten hier -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Non-Profit Organization. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
