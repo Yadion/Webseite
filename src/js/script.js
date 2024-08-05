@@ -1,6 +1,10 @@
 const data = [
-    { country: 'Deutschland', company: 'WV', emissions: '27t' },
-    { country: 'China', company: 'Company B', emissions: 6000 },
+    { country: 'Deutschland', company: 'WV', emissions: 27 },
+    { country: 'Frankreich', company: 'Company B', emissions: 6000 },
+    { country: 'Spanien', company: 'Company C', emissions: 6000 },
+    { country: 'Italien', company: 'Company D', emissions: 6000 },
+    { country: 'Schweitz', company: 'Company E', emissions: 6000 },
+    { country: 'Polen', company: 'Company F', emissions: 6000 },
     // Weitere fiktive Daten
 ];
 
