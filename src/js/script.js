@@ -1,5 +1,5 @@
 const data = [
-    { country: 'USA', company: 'Company A', emissions: 5000 },
+    { country: 'Deutschland', company: 'WV', emissions: '27t' },
     { country: 'China', company: 'Company B', emissions: 6000 },
     // Weitere fiktive Daten
 ];
