@@ -1,27 +1,109 @@
+/* Hintergrundfarbe für die gesamte Seite */
 body {
+    background-color: #f0f0f0; /* Helles Grau für den Hintergrund */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    min-height: 100vh; /* Stellt sicher, dass der Body mindestens die Höhe des Viewports hat */
 }
-header nav {
-    width: 70%;
-    background-color: aqua;
-    justify-content: left;
+
+/* Stil für die Navigation */
+nav {
+    background-color: #39afab;
+    color: rgba(10, 1, 1, 0.678);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-main {
-    display: flex;
-    background-color: gray;
-    width: 100%; /* Anpassen, um den gesamten Container zu nutzen */
-    justify-content: left; /* Zentriert den Inhalt horizontal */
+
+/* Stil für die Navigation Links */
+nav a {
+    color: rgba(10, 1, 1, 0.678);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: inline-block;
 }
-body main {
-    width: 70%;
-    background-color: gray;
-    justify-content: left;
+
+/* Stil für den Hover-Effekt der Links */
+nav a:hover {
+    background-color: #f1f1f1;
+    border-radius: 4px;
 }
+
+/* Hauptinhalt der Seite */
+.main-content {
+    flex: 1; /* Macht den Hauptinhalt flexibel, damit der Footer immer unten bleibt */
+    padding: 20px;
+}
+
+/* Allgemeine Stile für die Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabellenränder und -zellen */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Tabellenüberschriften */
+th {
+    background-color: #39afab;
+    color: rgba(10, 1, 1, 0.678);
+    cursor: pointer;
+    position: relative;
+}
+
+/* Tabellenzeilen */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Sortierpfeile */
+th::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+th.asc::after {
+    border-bottom: 5px solid #fff;
+}
+
+th.desc::after {
+    border-top: 5px solid #fff;
+}
+
+/* Footer */
 footer {
-    width: 50%;
-    background-color: red;
+    background-color: #333; /* Hintergrundfarbe des Footers */
+    color: #fff; /* Schriftfarbe des Footers */
+    padding: 10px 20px;
+    text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
 }

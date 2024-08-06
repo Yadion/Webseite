@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2-Footprint Webseite</title>
+    <link rel="stylesheet" type="text/css" href="/src/css/styles.css">
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+</head>
+
+<header> 
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Land</th>
+                <th onclick="sortTable(1)">Unternehmen</th>
+                <th onclick="sortTable(2)">2021 (Millionen Tonnen CO2)</th>
+                <th onclick="sortTable(3)">2022 (Millionen Tonnen CO2)</th>
+                <th onclick="sortTable(4)">2023 (Millionen Tonnen CO2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Deutschland</td>
+                <td>Volkswagen AG</td>
+                <td>45.2</td>
+                <td>43.0</td>
+                <td>40.5</td>
+            </tr>
+            <tr>
+                <td>Deutschland</td>
+                <td>BASF SE</td>
+                <td>20.1</td>
+                <td>19.8</td>
+                <td>18.7</td>
+            </tr>
+            <tr>
+                <td>Frankreich</td>
+                <td>TotalEnergies</td>
+                <td>38.0</td>
+                <td>36.5</td>
+                <td>35.0</td>
+            </tr>
+            <tr>
+                <td>Frankreich</td>
+                <td>Airbus SE</td>
+                <td>15.2</td>
+                <td>14.7</td>
+                <td>13.9</td>
+            </tr>
+            <tr>
+                <td>Spanien</td>
+                <td>Repsol S.A.</td>
+                <td>29.0</td>
+                <td>28.2</td>
+                <td>27.5</td>
+            </tr>
+            <tr>
+                <td>Spanien</td>
+                <td>Iberdrola S.A.</td>
+                <td>18.5</td>
+                <td>17.8</td>
+                <td>16.9</td>
+            </tr>
+            <tr>
+                <td>Polen</td>
+                <td>PKN Orlen</td>
+                <td>22.0</td>
+                <td>21.5</td>
+                <td>20.8</td>
+            </tr>
+            <tr>
+                <td>Polen</td>
+                <td>PGNiG</td>
+                <td>17.5</td>
+                <td>16.9</td>
+                <td>16.2</td>
+            </tr>
+            <tr>
+                <td>Schweiz</td>
+                <td>Nestlé S.A.</td>
+                <td>12.0</td>
+                <td>11.5</td>
+                <td>11.0</td>
+            </tr>
+            <tr>
+                <td>Schweiz</td>
+                <td>Novartis AG</td>
+                <td>10.2</td>
+                <td>9.8</td>
+                <td>9.3</td>
+            </tr>
+            <tr>
+                <td>Italien</td>
+                <td>Eni S.p.A.</td>
+                <td>35.0</td>
+                <td>34.2</td>
+                <td>33.5</td>
+            </tr>
+            <tr>
+                <td>Italien</td>
+                <td>Fiat Chrysler Automobiles</td>
+                <td>20.5</td>
+                <td>19.8</td>
+                <td>19.0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="/src/js/tablesort.js"></script>
+    <footer>
+        <p>&copy; 2024 Non-Profit Organization. Alle Rechte vorbehalten. Alle dargestellten Daten sind Fiktiv.</p>
+    </footer>
+    
+</body>
+</html>
