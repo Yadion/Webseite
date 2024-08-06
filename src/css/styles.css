@@ -1,4 +1,4 @@
-/* Hintergrundfarbe und Layout für den gesamten Body */
+/* Body-Stile */
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
@@ -8,14 +8,22 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
 }
 
-/* Navigation */
 nav {
-    background-color: #39afab;
+    background-color: #929494;
     color: rgba(10, 1, 1, 0.678);
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Links in der Navigation */
@@ -27,24 +35,30 @@ nav a {
     display: inline-block;
 }
 
-/* Hover-Effekt für Navigation Links */
 nav a:hover {
     background-color: #f1f1f1;
     border-radius: 4px;
+}
+
+/* Suchfeld-Stile */
+#searchInput {
+    padding: 8px;
+    width: 265px;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 /* Tabellen-Titel */
 caption {
     font-size: 1.8em;
     font-weight: bold;
-    margin-bottom: 24px;
+    margin: 12px 0;
     text-align: center;
 }
 
-/* Hauptinhalt der Seite */
 .main-content {
-    flex: 1;
-    padding: 20px;
+    margin-top: 8px;
+    padding: 18px;
 }
 
 /* Tabelle */
@@ -55,7 +69,6 @@ table {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Tabellenränder und -zellen */
 table, th, td {
     border: 2px solid #ddd;
 }
@@ -66,7 +79,6 @@ th, td {
     font-size: 16px;
 }
 
-/* Tabellenüberschriften */
 th {
     background-color: #39afab;
     color: rgba(10, 1, 1, 0.678);
@@ -74,7 +86,6 @@ th {
     position: relative;
 }
 
-/* Tabellenzeilen */
 tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
@@ -105,7 +116,7 @@ th.desc::after {
     border-top: 5px solid #fff;
 }
 
-/* Footer */
+/* Footer-Stile */
 footer {
     background-color: #333;
     color: #fff;
@@ -114,4 +125,5 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
 }
