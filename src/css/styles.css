@@ -11,6 +11,7 @@ body {
     position: relative;
 }
 
+/* Navigation */
 nav {
     background-color: #929494;
     color: rgba(10, 1, 1, 0.678);
@@ -35,6 +36,7 @@ nav a {
     display: inline-block;
 }
 
+/* Hover-Effekt für Navigation Links */
 nav a:hover {
     background-color: #f1f1f1;
     border-radius: 4px;
@@ -46,6 +48,7 @@ nav a:hover {
     width: 265px;
     box-sizing: border-box;
     margin: 0;
+    margin-left: auto; /* Sorgt dafür, dass das Suchfeld am rechten Rand bleibt */
 }
 
 /* Tabellen-Titel */
@@ -84,6 +87,10 @@ th {
     color: rgba(10, 1, 1, 0.678);
     cursor: pointer;
     position: relative;
+}
+th:hover {
+    background-color: #8fcfcf; /* Hintergrundfarbe beim Hover */
+    border-radius: 12px; /* Rundung beim Hover */
 }
 
 tbody tr:nth-child(even) {
