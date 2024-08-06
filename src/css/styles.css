@@ -1,16 +1,16 @@
-/* Hintergrundfarbe für die gesamte Seite */
+/* Hintergrundfarbe und Layout für den gesamten Body */
 body {
-    background-color: #f0f0f0; /* Helles Grau für den Hintergrund */
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Stellt sicher, dass der Body mindestens die Höhe des Viewports hat */
+    min-height: 100vh;
 }
 
-/* Stil für die Navigation */
+/* Navigation */
 nav {
     background-color: #39afab;
     color: rgba(10, 1, 1, 0.678);
@@ -18,7 +18,7 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Stil für die Navigation Links */
+/* Links in der Navigation */
 nav a {
     color: rgba(10, 1, 1, 0.678);
     text-decoration: none;
@@ -27,19 +27,27 @@ nav a {
     display: inline-block;
 }
 
-/* Stil für den Hover-Effekt der Links */
+/* Hover-Effekt für Navigation Links */
 nav a:hover {
     background-color: #f1f1f1;
     border-radius: 4px;
 }
 
+/* Tabellen-Titel */
+caption {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
 /* Hauptinhalt der Seite */
 .main-content {
-    flex: 1; /* Macht den Hauptinhalt flexibel, damit der Footer immer unten bleibt */
+    flex: 1;
     padding: 20px;
 }
 
-/* Allgemeine Stile für die Tabelle */
+/* Tabelle */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -49,11 +57,11 @@ table {
 
 /* Tabellenränder und -zellen */
 table, th, td {
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
 }
 
 th, td {
-    padding: 12px;
+    padding: 18px;
     text-align: center;
     font-size: 16px;
 }
@@ -99,8 +107,8 @@ th.desc::after {
 
 /* Footer */
 footer {
-    background-color: #333; /* Hintergrundfarbe des Footers */
-    color: #fff; /* Schriftfarbe des Footers */
+    background-color: #333;
+    color: #fff;
     padding: 10px 20px;
     text-align: center;
     display: flex;
