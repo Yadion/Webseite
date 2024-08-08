@@ -59,6 +59,25 @@ nav a:hover {
     margin-right: auto; /* Sorgt dafür, dass das Suchfeld am rechten Rand bleibt */
 }
 
+/* Hintergrundbild Container */
+.background-container {
+    background-image: url('/public/Banner.jpeg');
+    background-size: cover; /* Skaliert das Bild, um den Container zu füllen */
+    background-position: center; /* Zentriert das Bild */
+    background-attachment: fixed; /* Fixiert das Bild beim Scrollen */
+    background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+    padding: 20px; /* Optional: Abstände hinzufügen */
+    flex: 1; /* Macht sicher, dass dieser Container den verfügbaren Raum zwischen Navigation und Footer ausfüllt */
+}
+
+/* Hauptinhalt */
+.main-content {
+    margin-top: 12px; /* Genügend Abstand für Navigation */
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.9); /* Leicht transparenter Hintergrund für besseren Kontrast */
+    border-radius: 8px; /* Optional: Abgerundete Ecken */
+}
+
 /* Tabellen-Titel */
 caption {
     font-size: 1.8em;
@@ -68,18 +87,13 @@ caption {
     padding: 8px;
 }
 
-/* Abstand des Hauptinhalts vom oberen Rand, um Überlappung zu verhindern */
-.main-content {
-    margin-top: 12px; /* Genügend Abstand für Navigation */
-    padding: 22px;
-}
-
 /* Tabelle */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
 }
 
 table, th, td {
@@ -87,9 +101,8 @@ table, th, td {
 }
 
 th, td {
-    padding: 18px;
-    text-align: center;
-    font-size: 16px;
+    padding: 12px; /* Reduziertes Padding für kleinere Bildschirme */
+    font-size: 14px; /* Kleinere Schriftgröße */
 }
 
 th {
@@ -195,6 +208,17 @@ footer {
     nav a {
         padding: 8px;
         font-size: 12px;
+    }
+    table {
+        display: block; /* Macht die Tabelle scrollbar bei kleinen Bildschirmen */
+        overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+        white-space: nowrap; /* Verhindert das Umbrechen der Zellen */
+    }
+
+    /* Tabellen-Zellen */
+    th, td {
+        padding: 8px; /* Weiter reduziertes Padding */
+        font-size: 12px; /* Weiter reduzierte Schriftgröße */
     }
 
     /* Hauptinhalt für sehr kleine Bildschirme */
