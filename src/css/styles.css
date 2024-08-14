@@ -1,23 +1,40 @@
+/* Farb- und Größenvariablen */
+:root {
+    --primary-color: #929494;
+    --secondary-color: rgba(10, 1, 1, 0.678);
+    --hover-color: #f1f1f1;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --font-family: Arial, sans-serif;
+    --font-size-base: 16px;
+    --border-color: #ddd;
+    --table-header-color: #39afab;
+    --table-header-hover-color: #8fcfcf;
+    --footer-bg-color: #333;
+    --footer-text-color: #fff;
+}
+
 /* Body-Stile */
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     position: relative;
+    font-size: var(--font-size-base);
 }
 
 /* Navigation */
 nav {
-    background-color: #929494;
-    color: rgba(10, 1, 1, 0.678);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 12px 18px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Sticky statt fixed */
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,29 +42,25 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Damit sich die Elemente bei Bedarf umbrechen */
-    background: #929494; /* Sicherstellen, dass Hintergrundfarbe auch beim Überlappen sichtbar ist */
+    flex-wrap: wrap;
 }
 
-/* Container für Links und Suchfeld */
 .nav-left {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Damit die Links bei Bedarf umgebrochen werden */
+    flex-wrap: wrap;
 }
 
-/* Links in der Navigation */
 nav a {
-    color: rgba(10, 1, 1, 0.678);
+    color: var(--secondary-color);
     text-decoration: none;
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: calc(var(--font-size-base) - 2px);
     display: inline-block;
 }
 
-/* Hover-Effekt für Navigation Links */
 nav a:hover {
-    background-color: #f1f1f1;
+    background-color: var(--hover-color);
     border-radius: 4px;
 }
 
@@ -56,29 +69,28 @@ nav a:hover {
     padding: 12px;
     width: 75%;
     box-sizing: border-box;
-    margin-right: auto; /* Sorgt dafür, dass das Suchfeld am rechten Rand bleibt */
+    margin-right: auto;
 }
 
 /* Hintergrundbild Container */
 .background-container {
     background-image: url('/public/Banner.jpeg');
-    background-size: cover; /* Skaliert das Bild, um den Container zu füllen */
-    background-position: center; /* Zentriert das Bild */
-    background-attachment: fixed; /* Fixiert das Bild beim Scrollen */
-    background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
-    padding: 20px; /* Optional: Abstände hinzufügen */
-    flex: 1; /* Macht sicher, dass dieser Container den verfügbaren Raum zwischen Navigation und Footer ausfüllt */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 20px;
+    flex: 1;
 }
 
 /* Hauptinhalt */
 .main-content {
-    margin-top: 12px; /* Genügend Abstand für Navigation */
     padding: 22px;
-    background: rgba(255, 255, 255, 0.9); /* Leicht transparenter Hintergrund für besseren Kontrast */
-    border-radius: 8px; /* Optional: Abgerundete Ecken */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
 }
 
-/* Tabellen-Titel */
+/* Tabellen-Stile */
 caption {
     font-size: 1.8em;
     font-weight: bold;
@@ -87,33 +99,33 @@ caption {
     padding: 8px;
 }
 
-/* Tabelle */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+    overflow-x: auto;
 }
 
 table, th, td {
-    border: 2px solid #ddd;
+    border: 2px solid var(--border-color);
+    word-wrap: break-word;
 }
 
 th, td {
-    padding: 12px; /* Reduziertes Padding für kleinere Bildschirme */
-    font-size: 14px; /* Kleinere Schriftgröße */
+    padding: 12px;
+    font-size: 14px;
 }
 
 th {
-    background-color: #39afab;
-    color: rgba(10, 1, 1, 0.678);
+    background-color: var(--table-header-color);
+    color: var(--secondary-color);
     cursor: pointer;
     position: relative;
 }
 
 th:hover {
-    background-color: #8fcfcf; /* Hintergrundfarbe beim Hover */
+    background-color: var(--table-header-hover-color);
 }
 
 tbody tr:nth-child(even) {
@@ -121,7 +133,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: var(--hover-color);
 }
 
 /* Sortierpfeile */
@@ -148,8 +160,8 @@ th.desc::after {
 
 /* Footer-Stile */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     padding: 10px 20px;
     text-align: center;
     display: flex;
@@ -158,9 +170,8 @@ footer {
     margin-top: auto;
 }
 
-/* Media Queries für Smartphones und Tablets */
+/* Media Queries */
 @media (max-width: 768px) {
-    /* Navigation für kleinere Bildschirme */
     nav {
         flex-direction: column;
         padding: 10px;
@@ -168,61 +179,91 @@ footer {
 
     .nav-left {
         width: 100%;
-        justify-content: center; /* Links zentrieren */
+        justify-content: center;
         margin-bottom: 10px;
     }
 
     #searchInput {
-        width: 100%; /* Suchfeld auf volle Breite */
-        margin-left: 0; /* Kein margin-left bei kleinen Bildschirmen */
+        width: 100%;
+        margin-left: 0;
     }
 
-    /* Links in der Navigation */
     nav a {
         padding: 10px;
-        font-size: 14px;
+        font-size: calc(var(--font-size-base) - 4px);
     }
 
-    /* Hauptinhalt für kleinere Bildschirme */
     .main-content {
-        margin-top: 70px; /* Reduzierter Abstand */
+        margin-top: 70px;
+        padding: 16px;
+    }
+
+    table {
+        width: 100%;
+        table-layout: auto; /* Dynamische Breite */
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px; /* Etwas größere Schriftgröße */
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 530px) {
+    .main-content {
+        padding: calc(10px + 1vw); /* Dynamisches Padding basierend auf Bildschirmgröße */
+    }
+
+    table {
+        width: 100%;
+        table-layout: auto; /* Dynamische Breite */
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+        word-wrap: break-word;
     }
 }
 
 @media (max-width: 480px) {
-    /* Navigation für sehr kleine Bildschirme */
     nav {
         padding: 10px 5px;
     }
 
     .nav-left {
-        flex-direction: column; /* Links untereinander anordnen */
-        align-items: flex-start; /* Links am Anfang ausrichten */
+        align-items: flex-start;
+        width: 100%;
     }
 
     #searchInput {
-        width: 100%; /* Suchfeld weiterhin auf volle Breite */
+        width: 100%;
     }
 
-    /* Links in der Navigation */
     nav a {
         padding: 8px;
-        font-size: 12px;
-    }
-    table {
-        display: block; /* Macht die Tabelle scrollbar bei kleinen Bildschirmen */
-        overflow-x: auto; /* Ermöglicht horizontales Scrollen */
-        white-space: nowrap; /* Verhindert das Umbrechen der Zellen */
+        font-size: calc(var(--font-size-base) - 6px);
     }
 
-    /* Tabellen-Zellen */
-    th, td {
-        padding: 8px; /* Weiter reduziertes Padding */
-        font-size: 12px; /* Weiter reduzierte Schriftgröße */
-    }
-
-    /* Hauptinhalt für sehr kleine Bildschirme */
     .main-content {
-        margin-top: 60px; /* Weiter reduzierter Abstand */
+        padding: calc(8px + 1vw); /* Dynamisches Padding */
+        margin-top: 60px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        table-layout: auto; /* Dynamische Breite */
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+        word-wrap: break-word;
     }
 }
