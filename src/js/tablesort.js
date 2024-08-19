@@ -20,17 +20,17 @@ document.getElementById('searchInput').addEventListener('input', searchTable);
 
 // Sortierfunktion
 function sortTable(columnIndex) {
-    var table = document.querySelector("table");
-    var rows = Array.from(table.querySelectorAll("tbody tr"));
-    var ascending = table.querySelectorAll("th")[columnIndex].classList.toggle("asc");
+    let table = document.querySelector("table");
+    let rows = Array.from(table.querySelectorAll("tbody tr"));
+    let ascending = table.querySelectorAll("th")[columnIndex].classList.toggle("asc");
 
     rows.sort((rowA, rowB) => {
-        var cellA = rowA.children[columnIndex].textContent.trim();
-        var cellB = rowB.children[columnIndex].textContent.trim();
+        let cellA = rowA.children[columnIndex].textContent.trim();
+        let cellB = rowB.children[columnIndex].textContent.trim();
 
         // Konvertiere Zelleninhalte in Zahlen für den Vergleich
-        var valueA = isNaN(cellA) ? cellA : parseFloat(cellA);
-        var valueB = isNaN(cellB) ? cellB : parseFloat(cellB);
+        let valueA = isNaN(cellA) ? cellA : parseFloat(cellA);
+        let valueB = isNaN(cellB) ? cellB : parseFloat(cellB);
 
         if (ascending) {
             return (valueA > valueB) ? 1 : (valueA < valueB) ? -1 : 0;

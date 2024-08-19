@@ -49,12 +49,13 @@ nav {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    padding: 1%;
 }
 
 nav a {
     color: var(--secondary-color);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 12px;
     font-size: calc(var(--font-size-base) - 2px);
     display: inline-block;
 }
