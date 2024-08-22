@@ -2,7 +2,7 @@
 :root {
     --primary-color: #c0bcbc;
     --secondary-color: rgba(10, 1, 1, 0.678);
-    --hover-color: #f1f1f1;
+    --hover-color: #f1f1f15b;
     --background-color: #f0f0f0;
     --text-color: #333;
     --font-family: 'Arial', sans-serif;
@@ -68,6 +68,8 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 4px;
 }
+
+
 
 /* Hintergrundbild Container */
 .background-container {
@@ -192,4 +194,5 @@ footer {
 }
 
 /* Responsive Tabelle für verschiedene Bildschirmgrößen */
+
 
