@@ -1,6 +1,6 @@
 /* Farb- und Größenvariablen */
 :root {
-    --primary-color: #929494;
+    --primary-color: #c0bcbc;
     --secondary-color: rgba(10, 1, 1, 0.678);
     --hover-color: #f1f1f1;
     --background-color: #f0f0f0;
@@ -83,7 +83,7 @@ body {
 /* Hauptinhalt */
 .main-content {
     padding: 22px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.685);
     border-radius: 8px;
 }
 
@@ -93,7 +93,7 @@ body {
     font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 /* Tabellen-Stile */
@@ -101,9 +101,10 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background-color: #fff;
+    padding: 10px;
+    background-color: #ffffffa9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 18px;
 }
 
 thead {
@@ -129,7 +130,7 @@ th:hover {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f9f9f900;
 }
 
 tbody tr:hover {
