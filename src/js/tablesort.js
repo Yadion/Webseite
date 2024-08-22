@@ -94,6 +94,7 @@ function updateChart() {
                         label: '2021',
                         data: data2021,
                         borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
                         borderWidth: 1,
                         fill: false
                     },
@@ -101,6 +102,7 @@ function updateChart() {
                         label: '2022',
                         data: data2022,
                         borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
                         borderWidth: 1,
                         fill: false
                     },
@@ -108,6 +110,7 @@ function updateChart() {
                         label: '2023',
                         data: data2023,
                         borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
                         borderWidth: 1,
                         fill: false
                     }
