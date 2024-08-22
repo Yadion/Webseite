@@ -2,7 +2,7 @@
 function searchTable() {
     // Zugriff auf das Suchfeld und den Suchbegriff
     const input = document.getElementById('searchInput').value.toLowerCase();
-    const table = document.querySelector("table");
+    const table = document.querySelector("table.table"); // Sicherstellen, dass die Bootstrap-Klasse "table" verwendet wird
     const rows = Array.from(table.querySelectorAll("tbody tr"));
     
     // Durchlaufen aller Zeilen in der Tabelle
@@ -20,10 +20,24 @@ document.getElementById('searchInput').addEventListener('input', searchTable);
 
 // Sortierfunktion
 function sortTable(columnIndex) {
-    let table = document.querySelector("table");
+    let table = document.querySelector("table.table"); // Sicherstellen, dass die Bootstrap-Klasse "table" verwendet wird
     let rows = Array.from(table.querySelectorAll("tbody tr"));
-    let ascending = table.querySelectorAll("th")[columnIndex].classList.toggle("asc");
+    let thElements = table.querySelectorAll("th");
+    
+    // Entferne Sortierklassen von allen Spalten
+    thElements.forEach((th, index) => {
+        if (index !== columnIndex) {
+            th.classList.remove("asc", "desc");
+        }
+    });
 
+    // Bestimmen der Sortierrichtung
+    let ascending = thElements[columnIndex].classList.toggle("asc");
+    if (!ascending) {
+        thElements[columnIndex].classList.toggle("desc", true);
+    }
+
+    // Sortiere die Zeilen basierend auf dem Inhalt der angegebenen Spalte
     rows.sort((rowA, rowB) => {
         let cellA = rowA.children[columnIndex].textContent.trim();
         let cellB = rowB.children[columnIndex].textContent.trim();
@@ -39,5 +53,6 @@ function sortTable(columnIndex) {
         }
     });
 
+    // Sortierte Zeilen wieder in den Tabellenkörper einfügen
     rows.forEach(row => table.querySelector("tbody").appendChild(row));
 }
