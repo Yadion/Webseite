@@ -86,6 +86,11 @@ body {
     background: rgba(255, 255, 255, 0.685);
     border-radius: 8px;
 }
+.about-content {
+    background: rgba(255, 255, 255, 0.685);
+    border-radius: 8px;
+    padding: 22px;
+}
 
 /* Caption-Stile */
 .caption-container {
@@ -166,6 +171,11 @@ td:nth-child(4),
 td:nth-child(5) {
     text-align: right;
 }
+
+#chartContainer {
+    margin-top: 20px; /* Optional: Abstand zum oberen Inhalt */
+}
+
 
 /* Footer */
 footer {
