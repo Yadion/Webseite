@@ -7,7 +7,7 @@
     --text-color: #333;
     --font-family: 'Arial', sans-serif;
     --font-size-base: 16px;
-    --border-color: #ddd;
+    --border-color: #dddddd65;
     --table-header-color: #39afab;
     --table-header-hover-color: #8fcfcf;
     --footer-bg-color: #333;
@@ -62,7 +62,7 @@ body {
 /* Suchfeld */
 .search-input-custom {
     padding: 12px;
-    width: 75%;
+    width: 50%;
     box-sizing: border-box;
     margin-right: auto;
     border: 1px solid var(--border-color);
