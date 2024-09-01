@@ -54,10 +54,6 @@ body {
     text-decoration: none;
 }
 
-.nav-link-custom:hover {
-    background-color: var(--hover-color);
-    border-radius: 4px;
-}
 
 /* Suchfeld */
 .search-input-custom {
