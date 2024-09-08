@@ -26,47 +26,6 @@ body {
     min-height: 100vh;
     font-size: var(--font-size-base);
 }
-
-/* Container für Inhalte */
-.container {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-/* Navigation */
-.navbar-custom {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.nav-link-custom {
-    color: var(--secondary-color);
-    font-size: calc(var(--font-size-base) - 2px);
-    padding: 10px 12px;
-    text-decoration: none;
-}
-
-
-/* Suchfeld */
-.search-input-custom {
-    padding: 12px;
-    width: 50%;
-    box-sizing: border-box;
-    margin-right: auto;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-}
-
-
-
 /* Hintergrundbild Container */
 .background-container {
     background-image: url('/public/Banner.jpeg');
@@ -99,17 +58,6 @@ body {
     color: var(--text-color);
 }
 
-/* Tabellen-Stile */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #ffffffa9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 18px;
-}
-
 thead {
     background-color: var(--table-header-color);
     color: var(--secondary-color);
@@ -126,19 +74,6 @@ th {
     cursor: pointer;
     position: relative;
     font-weight: 600;
-}
-
-th:hover {
-    background-color: var(--table-header-hover-color);
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f9f9f900;
-}
-
-tbody tr:hover {
-    background-color: var(--hover-color);
-    transition: background-color 0.3s ease;
 }
 
 /* Sortierpfeile */
@@ -173,8 +108,6 @@ td:nth-child(5) {
 #chartContainer {
     margin-top: 20px; /* Optional: Abstand zum oberen Inhalt */
 }
-
-
 /* Footer */
 footer {
     background-color: var(--footer-bg-color);
