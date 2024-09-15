@@ -2,16 +2,13 @@ Case study for a university project \
 This is my first Public Project 
 
 
-
-
-
 public
-├── index.html
-│   ├── banner.png
-│   └── logo.png
-├── about.html
-└──src
+├── index.html                     
+│   ├── banner.png                 
+│   └── logo.png                    
+├── about.html                      
+└── src                             
     ├── css
-    │    └── styles.css
+    │    └── styles.css            
     └── js
-        └── tabelfunktion.js
+        └── tabelfunktion.js 
