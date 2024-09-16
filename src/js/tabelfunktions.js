@@ -56,7 +56,6 @@ function sortTable(columnIndex) {
 
     rows.forEach(row => table.querySelector("tbody").appendChild(row));
 }
-
 // Diagramm aktualisieren
 function updateChart() {
     const chartContainer = document.getElementById('chartContainer');
@@ -66,12 +65,10 @@ function updateChart() {
         chartInstance.destroy();
         chartInstance = null;
     }
-
     const labels = [];
     const data2021 = [];
     const data2022 = [];
     const data2023 = [];
-
     const rows = document.querySelectorAll('tbody tr');
     rows.forEach(row => {
         if (row.style.display !== 'none') {
@@ -82,7 +79,6 @@ function updateChart() {
             data2023.push(parseFloat(cells[4].textContent));
         }
     });
-
     if (labels.length > 0) {
         const ctx = chartCanvas.getContext('2d');
         chartInstance = new Chart(ctx, {
@@ -125,13 +121,11 @@ function updateChart() {
                 }
             }
         });
-
         chartContainer.style.display = 'block';
     } else {
-        chartContainer.style.display = 'none'; // Verstecke den Container, wenn keine Daten vorhanden sind
+        chartContainer.style.display = 'none'; // Verstecke den Container
     }
 }
-
 // Event-Listener für den Diagramm-Button
 document.getElementById('showChartBtn').addEventListener('click', function() {
     const chartContainer = document.getElementById('chartContainer');
