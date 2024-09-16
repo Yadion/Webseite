@@ -28,7 +28,7 @@ body {
 }
 /* Hintergrundbild Container */
 .background-container {
-    background-image: url('/public/Banner.jpeg');
+    background-image: url('/public/Banner.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
