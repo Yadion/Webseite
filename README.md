@@ -1,13 +1,13 @@
 Case study for a university project 
 
 
-public
+public/:
 ├── index.html                     
 │   ├── banner.png                 
 │   └── logo.png                    
 ├── about.html                      
-└── src                             
-    ├── css
+└── src/:                            
+    ├── css/:
     │    └── styles.css            
-    └── js
+    └── js/:
         └── tabelfunktion.js 
